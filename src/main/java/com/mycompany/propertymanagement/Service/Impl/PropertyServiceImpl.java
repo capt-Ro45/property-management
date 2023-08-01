@@ -16,6 +16,7 @@ import java.util.Optional;
 @Service
 public class PropertyServiceImpl implements PropertyService {
 
+
     @Value("${property.dummy:}")
     private String dummy;
 

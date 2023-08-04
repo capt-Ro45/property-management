@@ -55,6 +55,7 @@ public class PropertyController {
 
     @PatchMapping("/properties/update-description/{propertyId}")
     public ResponseEntity<PropertyDto> updatePropertyDescription(@RequestBody PropertyDto propertyDto,@PathVariable Long propertyId) {
+
         propertyDto = propertyService.updatePropertyDescription(propertyDto, propertyId);
         ResponseEntity<PropertyDto> responseEntity = new ResponseEntity<>(propertyDto, HttpStatus.OK);
         return responseEntity;

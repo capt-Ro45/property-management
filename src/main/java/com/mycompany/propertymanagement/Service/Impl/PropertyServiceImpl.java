@@ -16,6 +16,7 @@ import java.util.Optional;
 @Service
 public class PropertyServiceImpl implements PropertyService {
 
+
     @Value("${property.dummy:}")
     private String dummy;
 
@@ -66,8 +67,6 @@ public class PropertyServiceImpl implements PropertyService {
             PropertyEntity pe = optEn.get();
             pe.setTitle(propertyDto.getTitle());
             pe.setAddress(propertyDto.getAddress());
-            pe.setOwnerEmail(propertyDto.getOwnerEmail());
-            pe.setOwnerName(propertyDto.getOwnerName());
             pe.setPrice(propertyDto.getPrice());
             pe.setDescription(propertyDto.getDescription());
             dto = propertyConverter.convertEntitytoDto(pe);

@@ -28,4 +28,5 @@ public class UserController {
         userDto = userService.login(userDto.getOwnerEmail(), userDto.getPassword());
         return new ResponseEntity<>(userDto, HttpStatus.OK);
     }
+
 }

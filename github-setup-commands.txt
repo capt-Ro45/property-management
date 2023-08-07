@@ -3,10 +3,10 @@ first time Git & GitHub setup
 
 git init
 git add .
-git config user.email "anirudhjanga599@gmail.com"
+git config user.Email "anirudhjanga599@gmail.com"
 git commit -m "initial commit"
 git remote add origin https://github.com/capt-Ro45/property-management.git
-git remote set-url origin https://capt-Ro45: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@github.com/capt-Ro45/property-management.git
+git remote set-url origin https://capt-Ro45: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@github.com/capt-Ro45/property-management.git
 git push --set-upstream origin master
 
 next time onwards

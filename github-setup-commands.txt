@@ -6,7 +6,7 @@ git add .
 git config user.Email "anirudhjanga599@gmail.com"
 git commit -m "initial commit"
 git remote add origin https://github.com/capt-Ro45/property-management.git
-git remote set-url origin https://capt-Ro45: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@github.com/capt-Ro45/property-management.git
+git remote set-url origin https://capt-Ro45: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@github.com/capt-Ro45/property-management.git
 git push --set-upstream origin master
 
 next time onwards

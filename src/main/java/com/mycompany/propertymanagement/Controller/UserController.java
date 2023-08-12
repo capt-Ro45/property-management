@@ -2,6 +2,7 @@ package com.mycompany.propertymanagement.Controller;
 
 import com.mycompany.propertymanagement.Service.UserService;
 import com.mycompany.propertymanagement.dto.UserDto;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,13 +19,13 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<UserDto> register(@RequestBody UserDto userDto) {
+    public ResponseEntity<UserDto> register(@Valid @RequestBody UserDto userDto) {
         userDto = userService.register(userDto);
         return new ResponseEntity<>(userDto, HttpStatus.CREATED);
     }
 
     @PostMapping("/login")
-    public ResponseEntity<UserDto>login(@RequestBody UserDto userDto) {
+    public ResponseEntity<UserDto>login(@Valid @RequestBody UserDto userDto) {
         userDto = userService.login(userDto.getOwnerEmail(), userDto.getPassword());
         return new ResponseEntity<>(userDto, HttpStatus.OK);
     }
